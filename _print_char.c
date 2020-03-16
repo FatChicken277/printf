@@ -31,7 +31,7 @@ int print_string(va_list ap)
 	}
 	for (x = 0; str[x] != '\0'; x++)
 	{
-		print_char(str[x]);
+	print_char(str[x]);
 	}
 	return (x);
 }
@@ -67,7 +67,7 @@ int print_integer(va_list ap)
 	}
 	else
 	{
-		while ((p / 10) > 0)
+		while (p / 10 > 0)
 		{
 			p = p / 10;
 			contador++;
@@ -83,18 +83,40 @@ int print_integer(va_list ap)
  */
 void print_number(int n)
 {
-
-	unsigned int value = n;
+	long int resp, potencia, aux, acumula = 0;
+	long int pa, ca = 0, ra = 0, ra1 = 0, im;
 
 	if (n < 0)
 	{
 		print_char(45);
-		value = value * (-1);
+		n = n * (-1);
+	}
+	resp = n;
+	aux = resp;
+
+	while (resp % 10 != 0)
+	{
+		ca++;
+		resp = resp / 10;
 	}
 
-	if (value / 10)
+	potencia = 1;
+	for (pa = 1; pa <= ca - 1; pa++)
 	{
-		print_number(value / 10);
+		potencia = potencia * 10;
 	}
-	print_char((value % 10) + 48);
+	while (aux / 10 != 0)
+	{
+		acumula = acumula + ((aux % 10) * potencia);
+		aux = aux / 10;
+		potencia = potencia / 10;
+	}
+	acumula = acumula + aux;
+	ra1 = acumula;
+	for (im = 0; im < ca; im++)
+	{
+		ra = ra1 % 10;
+		print_char(ra + '0');
+		ra1 = ra1 / 10;
+	}
 }
