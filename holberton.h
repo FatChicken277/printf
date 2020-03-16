@@ -3,22 +3,21 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <unistd.h>
- 
+
 /**  Function printf **/
 /**********************/
- 
 /**
  * struct op - structure to use in printf
  * @op: ooperator of structure
  * @f: function of work
  */
- 
+
 typedef struct op
 {
-    char *op;
-    int (*f)(va_list);
+	char *op;
+	int (*f)(va_list);
 } op_t;
- 
+
 /* Prototype function to printf */
 int _printf(const char *format, ...);
 int print_char(char c);
@@ -27,6 +26,5 @@ int print_string(va_list);
 int print_percent(va_list);
 int print_integer(va_list ap);
 void print_number(int n);
- 
 int _parseo(const char *format, op_t ops[], va_list ap);
 #endif
