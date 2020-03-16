@@ -6,6 +6,7 @@
 
 /**  Function printf **/
 /**********************/
+
 /**
  * struct op - structure to use in printf
  * @op: ooperator of structure
@@ -26,5 +27,6 @@ int print_string(va_list);
 int print_percent(va_list);
 int print_integer(va_list ap);
 void print_number(int n);
+
 int _parseo(const char *format, op_t ops[], va_list ap);
 #endif
