@@ -51,7 +51,7 @@ int print_percent(__attribute__((unused))va_list ap)
 
 /**
  * print_integer - Print integer
- * @ap: argumnt
+ * @ap: argumnt input
  * Return: return the amount of characters
  */
 int print_integer(va_list ap)

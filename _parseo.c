@@ -3,7 +3,7 @@
 
 /**
  * _parseo - Print parseo
- * @format: arguments
+ * @format: arguments of input
  * @ops: arguments arrys
  * @ap: list of arg
  * Return: return the amount of characters
