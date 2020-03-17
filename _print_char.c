@@ -56,23 +56,11 @@ int print_percent(__attribute__((unused))va_list ap)
  */
 int print_integer(va_list ap)
 {
-	int p, contador = 1;
 
-	p = va_arg(ap, int);
+	int contador = 0;
 
-	print_number(p);
-	if (p < 10)
-	{
-		return (contador);
-	}
-	else
-	{
-		while (p / 10 > 0)
-		{
-			p = p / 10;
-			contador++;
-		}
-	}
+	contador = contador + print_number(va_arg(ap, int));
+
 	return (contador);
 }
 
@@ -81,42 +69,30 @@ int print_integer(va_list ap)
  * @n: argumnt
  * Return: void
  */
-void print_number(int n)
+int print_number(int n)
 {
-	long int resp, potencia, aux, acumula = 0;
-	long int pa, ca = 0, ra = 0, ra1 = 0, im;
+	int i, len, m;
+
+	i = 0;
+	len = 0;
+	m = 0;
+
+	if (n == INT_MIN)
+	{
+		n = n + 1;
+	}
 
 	if (n < 0)
 	{
-		print_char(45);
-		n = n * (-1);
-	}
-	resp = n;
-	aux = resp;
-
-	while (resp % 10 != 0)
-	{
-		ca++;
-		resp = resp / 10;
+		n = -n;
+		print_char('-');
+		i++;
 	}
 
-	potencia = 1;
-	for (pa = 1; pa <= ca - 1; pa++)
-	{
-		potencia = potencia * 10;
-	}
-	while (aux / 10 != 0)
-	{
-		acumula = acumula + ((aux % 10) * potencia);
-		aux = aux / 10;
-		potencia = potencia / 10;
-	}
-	acumula = acumula + aux;
-	ra1 = acumula;
-	for (im = 0; im < ca; im++)
-	{
-		ra = ra1 % 10;
-		print_char(ra + '0');
-		ra1 = ra1 / 10;
-	}
+	if (n / 10 != 0)
+		len = (m + print_number(n / 10));
+
+	print_char(n % 10 + '0');
+	i++;
+	return (i + len);
 }
