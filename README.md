@@ -37,6 +37,10 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print signed decimal integer
 
+**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;% :**
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No argument expected
+
 ---
 
 ## Return Value :traffic_light:
@@ -73,9 +77,9 @@ int main () {
 
 ## Contributing :scroll:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Alejandro Ramirez Ciceros](https://github.com/FatChicken277) :chicken:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Alejandro Ramírez Ciceros](https://github.com/FatChicken277) :chicken:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Marlon Aurelio Garcia Morales](https://github.com/clasesucatmarlon) :tophat:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Marlon Aurelio García Morales](https://github.com/clasesucatmarlon) :tophat:
 
 ## License :book:
 
