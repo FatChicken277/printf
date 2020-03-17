@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * _printf - Print string
+ * _printf - Print string input
  * @format: arguments
  * Return: return the amount of characters
  */
