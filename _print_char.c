@@ -56,33 +56,11 @@ int print_percent(__attribute__((unused))va_list ap)
  */
 int print_integer(va_list ap)
 {
-	int p, contador = 1;
 
-	p = va_arg(ap, int);
+	int contador = 0;
 
-	print_number(p);
+	contador = contador + print_number(va_arg(ap, int));
 
-	if (p == INT_MIN)
-	{
-		p = p + 1;
-	}
-
-	if (p < 0)
-	{
-		contador++;
-	}
-	if (p < 10)
-	{
-		return (contador);
-	}
-	else
-	{
-		while (p / 10 > 0)
-		{
-			p = p / 10;
-			contador++;
-		}
-	}
 	return (contador);
 }
 
@@ -91,18 +69,32 @@ int print_integer(va_list ap)
  * @n: argumnt
  * Return: void
  */
-void print_number(int n)
+int print_number(int n)
 {
-	unsigned int value = n;
+
+	int i, len, m;
+
+	i = 0;
+	len = 0;
+	m = 0;
+
+	if (n == INT_MIN)
+	{
+		n = n + 1;
+	}
 
 	if (n < 0)
 	{
-		print_char(45);
-		value = value * (-1);
+		n = -n;
+		print_char('-');
+		i++;
 	}
-	if (value / 10)
-	{
-		print_number(value / 10);
-	}
-	print_char((value % 10) + 48);
+
+	if (n / 10 != 0)
+		len = (m + print_number(n / 10));
+
+	print_char(n % 10 + '0');
+	i++;
+	return (i + len);
+
 }
