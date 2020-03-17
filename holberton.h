@@ -5,7 +5,7 @@
 #include <unistd.h>
 #include <limits.h>
 
-/**  Function printf to holberton**/
+/**  Function printf **/
 /**********************/
 
 /**
