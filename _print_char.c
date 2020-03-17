@@ -71,6 +71,7 @@ int print_integer(va_list ap)
  */
 int print_number(int n)
 {
+
 	int i, len, m;
 
 	i = 0;
@@ -95,4 +96,5 @@ int print_number(int n)
 	print_char(n % 10 + '0');
 	i++;
 	return (i + len);
+
 }
