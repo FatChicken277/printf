@@ -61,6 +61,12 @@ int print_integer(va_list ap)
 	p = va_arg(ap, int);
 
 	print_number(p);
+
+	if (p == INT_MIN)
+	{
+		p = p + 1;
+	}
+
 	if (p < 0)
 	{
 		contador++;
