@@ -3,8 +3,9 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <limits.h>
 
-/**  Function printf **/
+/**  Function printf to holberton**/
 /**********************/
 
 /**
@@ -26,7 +27,7 @@ int _print_char(va_list);
 int print_string(va_list);
 int print_percent(va_list);
 int print_integer(va_list ap);
-void print_number(int n);
+int print_number(int n);
 
 int _parseo(const char *format, op_t ops[], va_list ap);
 #endif
