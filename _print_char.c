@@ -72,15 +72,17 @@ int print_integer(va_list ap)
 int print_number(int n)
 {
 
-	int i, len, m;
+	int ban = 0, i, len, m;
 
 	i = 0;
 	len = 0;
 	m = 0;
 
+
 	if (n == INT_MIN)
 	{
 		n = n + 1;
+		ban = 1;
 	}
 
 	if (n < 0)
@@ -93,8 +95,17 @@ int print_number(int n)
 	if (n / 10 != 0)
 		len = (m + print_number(n / 10));
 
-	print_char(n % 10 + '0');
+	if (ban == 1)
+	{
+		print_char('8');
+	}
+	else
+	{
+		print_char(n % 10 + '0');
+	}
+
 	i++;
+
 	return (i + len);
 
 }

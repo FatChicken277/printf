@@ -28,6 +28,7 @@ int print_string(va_list);
 int print_percent(va_list);
 int print_integer(va_list ap);
 int print_number(int n);
+int print_dec(va_list ap);
 
 int _parseo(const char *format, op_t ops[], va_list ap);
 #endif
